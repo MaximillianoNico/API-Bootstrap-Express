@@ -5,14 +5,10 @@ describe('Mysql', ()=>{
         it('should connect to database mongo server', (done) => {
             try{
                 const db = mysql.createConnection({
-                    // host: `${process.env.MYSQL_PORT}`,
-                    // user: `${process.env.USER_MYSQL}`,
-                    // password: `${process.env.USER_MYSQL}`,
-                    // database: `${process.env.DATABASE_NAME_MYSQL}`
-                    host: '128.199.184.164',
-                    user: 'purwa',
-                    password: '123456',
-                    database: 'purwashop'
+                    host: `${process.env.MYSQL_PORT}`,
+                    user: `${process.env.USER_MYSQL}`,
+                    password: `${process.env.USER_MYSQL}`,
+                    database: `${process.env.DATABASE_NAME_MYSQL}`
                 });
                 
                 db.connect();

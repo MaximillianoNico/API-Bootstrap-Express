@@ -4,7 +4,7 @@ describe('Mongo', ()=>{
     describe('Connection', () => {
         it('should connect to database mongo server', (done) => {
             try{
-                mongoose.connect(`mongodb://admin:admin123@ds123753.mlab.com:23753/staging-blogdev`);
+                mongoose.connect(process.env.MOCK_DB_MONGO);
                 done();
             }catch(err){
                 
